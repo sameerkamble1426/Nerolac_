@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main {
+            width: 100%;
+            /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(painting-services-spotlight.jpg); */
+            background-position: center;
+            background-size: cover;
+            height: 109vh;
+        }
+
+        .login {
+            width: 400px;
+            height: 450px;
+            color: black;
+            background-color: white;
+            left: 89%;
+            top: 65%;
+            margin-left: -20%;
+            position: absolute;
+            margin-top: -20%;
+        }
+        i{
+            color: red;
+            margin: 10px;
+        }
+
+        form {
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #submitButton {
+            background-color: red;
+            color: white;
+            width: 200px;
+            font-size: large;
+            height: 24px;
+        }
+
+        #submitButton:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 50px;
+            color: darkblue;
+        }
+
+        .para {
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .imgs {
+            width: 33.3%;
+            box-shadow: 10px 2px 10px 2px #888888;
+            border-radius: 10px;
+        }
+
+        .imgs1 {
+            width: 100%;
+            height: 250px;
+            border: white;
+            display: flex;
+            text-align: center;
+        }
+
+        .corner {
+            text-align: center;
+            background-color: rgb(184, 182, 182);
+            color: darkblue;
+            border-radius: 10px;
+            width: 250px;
+            margin-left: 40%;
+        }
+
+        .no {
+            font-size: 40px;
+            color: white;
+            background-color: darkblue;
+            width: 80%;
+            text-decoration: none;
+            box-shadow: none;
+            list-style: none;
+        }
+
+        .sub {
+            background-color: orangered;
+            width: 260px;
+            height: 52px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+
+        .sub:hover {
+            background-color: darkblue;
+            width: 260px;
+            height: 50px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 40px;
+            border-color: white;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s;
+        }
+
+        .image {
+            width: 25%;
+            margin: 10px;
+            box-shadow: 8px 2px 8px 2px #888888;
+            border-radius: 5px;
+        }
+
+        .image:hover {
+            transition: transform 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .row {
+            width: 100%;
+            border: white;
+            display: flex;
+            text-align: center;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="https://www.nerolac.com/"><img src="nerolac-logo.png" alt="" width="300px"></a>
+    </div>
+    <section>
+        <img src="painting-services-spotlight.jpg" class="main" alt="">
+    </section>
+    <div class="login">
+        <form>
+            <h3> Create your dream home with our Nxtgen Painting Services </h3 <p> Fill the form below to book a free
+            site evaluation by Nerolac Nxtgen painting Services </p>
+            <input type="text" placeholder="Name" required> <br> <br>
+            <input type="number" placeholder="Mobile Number" required> <br> <br>
+            <input type="number" placeholder="Pincode" required> <br> <br>
+            <input type="email" placeholder="Email" required> <br> <br>
+            <input type="checkbox" id="myCheckbox">I agree to the Terms of Service and Privacy Policy Yes, I would like
+            to receive important updates and notifications through calls, sms, or e-mail <br>
+            *5 Day Painting available in selected cities only, subject to site evaluation. <br> <br>
+            <button type="button" class="btn" id="submitButton" onclick="location.href='https://www.nerolac.com/'" disabled>Get
+                Started</button>
+            <script>
+                document.getElementById('myCheckbox').addEventListener('change', function () {
+                    var submitButton = document.getElementById('submitButton');
+                    submitButton.disabled = !this.checked;
+                });
+            </script>
+        </form>
+    </div>
+    <h1 class="heading">Transform Your Home with NXTGEN Painting Services by <br> Nerolac</h1>
+    <p class="para"> Through Nerolac Painting Services, enjoy a holistic painting experience all under one roof. Connect
+        with expert painters, access multiple colour selection <br>tools and fulfil all your painting requirements
+        seamlessly. </p>
+    <div>
+    </div>
+    <div class="imgs1">
+        <div class="imgs"> <img src="why-us-icon-1.png"> <br>
+            <h2 style="color: darkblue;"> Trained Painters</h2>
+            <h4> A skilled team of experts with experience and an eye for detail.</h4>
+        </div>
+
+        <div class="imgs"> <img src="why-us-icon-2.png">
+            <h2 style="color: darkblue;">Verified background </h2>
+            <h4> An extensive background check with KYC compliance and documentation.</h4>
+        </div>
+
+        <div class="imgs"> <img src="why-us-icon-3.png">
+            <h2 style="color: darkblue;">Supervision*</h2>
+            <h4> On-Site supervision for a quality job.</h4>
+        </div>
+    </div> <br>
+    <h3 class="corner">That favourite corner</h3>
+    <h2 style="text-align: center; color: darkblue;">Latest Happenings in the Paint World</h2>
+    <h4 style="text-align: center;">Get some inspiration from these trending articles</h4>
+
+    <div class="slider-container">
+        <a href="https://www.nerolac.com/"><div class="slider">
+            <img src="D_1.jpg.webp" alt="Image 1" class="image">
+            <img src="D_2.jpg.webp" alt="Image 2" class="image">
+            <img src="Along-with-your-resume_D.jpg (1).webp" alt="Image 3" class="image">
+            <img src="6-Stylish-Pastel-Colour-Palettes-For-Your-Dream-Home_D.jpg.webp" alt="Image 4" class="image">
+            <img src="Luxury-Bathroom-Designs-5-Stunning-Inspirations-for-Your-Homes_D.jpg.webp" alt="Image 5" class="image">
+            <img src="Desktop_1920x548_0.jpg.webp" alt="Image 6" class="image">
+            <img src="D_1.jpg.webp" alt="Image 1" class="image">
+        </div>
+        </a>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let counter = 0;
+
+        prev.addEventListener('click', () => {
+            counter--;
+            slider.style.transform = `translateX(-${counter * 80}%)`;
+        });
+
+        next.addEventListener('click', () => {
+            counter++;
+            slider.style.transform = `translateX(-${counter * 80}%)`;
+        });
+    </script>
+
+
+    <footer style="background-color: darkblue; color: white;width: 100%;">
+        <div>
+            <h1><input type="email" placeholder="Notify me with new updates" class="no">
+                <button class="sub">Subcribe</button>
+            </h1>
+        </div>
+        <br>
+        <footer>
+            <div class="row">
+                <div style="width: 20%;">
+                    <p>
+                        <a href="https://www.nerolac.com/"><img src="nerolac-white-logo.png" width="300px"""></a>
+                    <h3>Follow us on: <br>
+                        <a href="https://en-gb.facebook.com/reg/"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.youtube.com/@login.."><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/login="><i class="fa-brands fa-square-twitter"></i></a>
+                    </h3>
+                    <br>
+
+                    Kansai Nerolac Paints Limited
+                    28th Floor, A - Wing, Marathon Futurex,
+                    Mafatlal Mills Compound, N M Joshi Marg,
+                    Area: Lower Parel
+                    City: Mumbai
+                    Pin: 400 013
+                    For queries: 1800 209 2092
+                    Nxtgen service enquiries: 1800 266 5566
+                    Waterproofing solutions: 1800 210 1214
+                    For Consumer queries/complaints,
+                    email to - complaints@nerolac.com
+                    </p>
+                </div>
+
+                <div style="width: 15%;">
+                    <h3>Paints & Products</h3>
+                    <p>Interior Wall Paints</p>
+                    <p> Exteriror Wall Paints</p>
+                    <p>Wood Coating</p>
+                    <p> Metal Enamel Paints</p>
+                    <p> Paint Ancillary</p>
+                    <p> Adhesives</p>
+                    <p>Waterproofing</p>
+                    <p>Nxtgen Painting Services</p>
+                </div>
+
+                <div style="width: 15%;">
+                    <h3>Colours</h3>
+                    <p>Colour Catalogue</p>
+                    <p>Common Colours</p>
+                    <p>Healthy Home Page</p>
+                    <p>Colour Palettle</p>
+                    <p>Red Colour</p>
+                    <p>Yellow Colour</p>
+                    <p>Green Colour</p>
+                    <p>Blue Colour</p>
+                </div>
+
+                <div style="width: 12%;">
+                    <br> <br>
+                    <p>Violet Colour</p>
+                    <p>Neutral Colour</p>
+                    <p>Beige Colour</p>
+                    <p>White Colour</p>
+                    <p>Pink Colour</p>
+                    <p>Purple Colour</p>
+                    <p>Lilac Colour</p>
+                    <p>peach Colour</p>
+                    <p>cream Colour</p>
+                    <p>Grey Colour</p>
+                </div>
+
+                <div style="width: 20%;">
+                    <h3>Inspiration</h3>
+                    <p>Interior Guides</p>
+                    <p>Exteriror Guides</p>
+                    <p>Blog</p>
+                    <p>Design Trend</p>
+                    <P>Ideas Gallery</P>
+                </div>
+
+                <div style="width: 14%;">
+                    <h3>Tools</h3>
+                    <p>Nerolac Knows</p>
+                    <p>Paint Budget Calculator</p>
+                    <p>Colour Visualiser</p>
+                    <p>Colour Picker</p>
+                </div>
+
+                <div style="width: 15%;">
+                    <h3>Get to know us</h3>
+                    <p>About Us</p>
+                    <p>Careers</p>
+                    <p>Investors</p>
+                    <p>Get in Touch</p>
+                    <p>Store Locator</p>
+                    <p>Sustainablity</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="topnav" id="myTopnav">
+            <a href="https://www.nerolac.com/">Home</a>
+            <a href="https://www.nerolac.com/privacy-policy.html">Privacy Polacy</a>
+            <a href="https://www.nerolac.com/terms-and-conditions.html">Tearms & Condation</a>
+            <a href="https://www.nerolac.com/quality-policy.html">Quality Policy</a>
+            <a href="https://www.nerolac.com/sitemap.html">Site Map</a>
+            <a href="https://www.nerolac.com/bio-medical-waste-rules.html">Bio Medical Waste</a>
+            <p style="font-size: 17px;">© 2023 Kansai Nerolac Paints Limited All Rights Reserved. A Subsidiary
+                of Kansai Paints, Japan</p>
+        </div>
+
+</body>
+</html>
